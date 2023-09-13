@@ -1,4 +1,4 @@
-let x = 0; // The value of x needs to be "remembered" from frame to frame
+let ghost1X = 0; // The value of x needs to be "remembered" from frame to frame
 
 function setup() {
     createCanvas(400, 300);
@@ -6,6 +6,6 @@ function setup() {
 
 function draw() {
     background(0);
-    circle(x, height / 2, 40);
-    x++;
+    circle(spiderX, height / 2, 40);
+    spiderX++;
 }

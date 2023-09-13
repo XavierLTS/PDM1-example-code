@@ -7,9 +7,9 @@ function setup() {
 
 function draw() {
     background(0);
-    circle(x, height / 2, 100);
-    if (x < 0 || x > width) {
+    circle(spiderX, height / 2, 100);
+    if (spiderX < 0 || spiderX > width) {
         moveAmount *= -1;
     }
-    x += moveAmount;
+    spiderX += moveAmount;
 }

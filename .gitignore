@@ -1,3 +1,26 @@
 .DS_Store
 .vscode
 /node_modules
+
+# Solution and example code to ignore until release time
+/W1P2 solutions
+/W2P1 solutions
+/W2P2 solutions
+/Snake/W2P2
+/W3P1 solutions
+/Snake/W3P1
+/W3P2 solutions
+/Snake/W3P2
+/W4L1 examples/halloweenV2
+/W4P1 solutions
+/Snake/W4P1
+/W4P2 solutions
+/W5P1 solutions
+/Snake/W5P1
+/W5P2 solutions
+/W6P1 solutions
+/Snake/W6P1
+/W6P2 solutions
+/Snake/W6P2
+/W7P1 solutions
+/Snake/W7P1

@@ -1,6 +1,6 @@
 const diameter = 40;
-let x = [];
-let y = [];
+let spiderX = [];
+let spiderY = [];
 
 function setup() {
     createCanvas(600, 400);
@@ -8,17 +8,17 @@ function setup() {
 
 function draw() {
     background(0);
-    x.push(mouseX);
-    y.push(mouseY);
-    if (x.length > 100) {
-        x = x.slice(x.length - 100);
-        y = y.slice(y.length - 100);
+    spiderX.push(mouseX);
+    spiderY.push(mouseY);
+    if (spiderX.length > 100) {
+        spiderX = spiderX.slice(spiderX.length - 100);
+        spiderY = spiderY.slice(spiderY.length - 100);
     }
-    for (let i = 0; i < x.length; i++) {
+    for (let i = 0; i < spiderX.length; i++) {
         const alpha = 255 * (i / 100);
-        const r = (x[i] / width) * 255;
-        const b = (y[i] / height) * 255;
+        const r = (spiderX[i] / width) * 255;
+        const b = (spiderY[i] / height) * 255;
         fill(r, 255, b, alpha);
-        circle(x[i], y[i], diameter);
+        circle(spiderX[i], spiderY[i], diameter);
     }
 }

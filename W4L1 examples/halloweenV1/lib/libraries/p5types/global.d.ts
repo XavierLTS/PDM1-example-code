@@ -12,7 +12,7 @@ declare global {
      *   CSS color
      *   @return the alpha value
      */
-    function ghost1Alpha(color: p5.Color | number[] | string): number;
+    function alpha(color: p5.Color | number[] | string): number;
 
     /**
      *   Extracts the blue value from a color or pixel
@@ -2616,7 +2616,7 @@ declare global {
      *   z-axis (webgl only)
      *   @chainable
      */
-    function ghost1Scale(s: number | p5.Vector | number[], y?: number, z?: number): p5;
+    function scale(s: number | p5.Vector | number[], y?: number, z?: number): p5;
 
     /**
      *   Increases or decreases the size of a shape by
@@ -2640,7 +2640,7 @@ declare global {
      *   object
      *   @chainable
      */
-    function ghost1Scale(scales: p5.Vector | number[]): p5;
+    function scale(scales: p5.Vector | number[]): p5;
 
     /**
      *   Shears a shape around the x-axis by the amount
