@@ -7,12 +7,12 @@ function setup() {
 
 function draw() {
     background(0);
-    circle(spiderX, height / 2, 100);
-    if (movingRight && spiderX < width) {
-        spiderX++;
+    circle(x, height / 2, 100);
+    if (movingRight && x < width) {
+        x++;
     }
-    else if (!movingRight && spiderX > 0) {
-        spiderX--;
+    else if (!movingRight && x > 0) {
+        x--;
     }
     else {
         movingRight = !movingRight;

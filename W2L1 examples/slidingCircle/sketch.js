@@ -6,6 +6,6 @@ function setup() {
 
 function draw() {
     background(0);
-    circle(spiderX, height / 2, 40);
-    spiderX++;
+    circle(x, height / 2, 40);
+    x++;
 }
