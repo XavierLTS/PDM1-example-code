@@ -1,4 +1,4 @@
-let ghost1X = 0; // The value of x needs to be "remembered" from frame to frame
+let x = 0; // The value of x needs to be "remembered" from frame to frame
 
 function setup() {
     createCanvas(400, 300);

@@ -181,41 +181,41 @@ function draw() {
     line(740, 20, 800, 40);
     line(80, 0, 660, 120);
     line(660, 120, 720, 600);
-    line(x, MIN_SPIDER_Y, x, y);
+    line(spiderX, MIN_SPIDER_Y, spiderX, spiderY);
     // Spider
     fill(0);
-    ellipse(x, y, 80, 50);
+    ellipse(spiderX, spiderY, 80, 50);
     noFill();
-    arc(x - 50, y - 5, 30, 40, PI + QUARTER_PI, TWO_PI);
-    arc(x + 50, y - 5, 30, 40, PI, TWO_PI - QUARTER_PI);
-    arc(x - 50, y, 30, 40, PI, TWO_PI);
-    arc(x + 50, y, 30, 40, PI, TWO_PI);
-    arc(x - 50, y + 5, 30, 40, PI + QUARTER_PI, TWO_PI);
-    arc(x + 50, y + 5, 30, 40, PI, TWO_PI - QUARTER_PI);
-    arc(x - 50, y + 10, 30, 40, PI, TWO_PI);
-    arc(x + 50, y + 10, 30, 40, PI, TWO_PI);
+    arc(spiderX - 50, spiderY - 5, 30, 40, PI + QUARTER_PI, TWO_PI);
+    arc(spiderX + 50, spiderY - 5, 30, 40, PI, TWO_PI - QUARTER_PI);
+    arc(spiderX - 50, spiderY, 30, 40, PI, TWO_PI);
+    arc(spiderX + 50, spiderY, 30, 40, PI, TWO_PI);
+    arc(spiderX - 50, spiderY + 5, 30, 40, PI + QUARTER_PI, TWO_PI);
+    arc(spiderX + 50, spiderY + 5, 30, 40, PI, TWO_PI - QUARTER_PI);
+    arc(spiderX - 50, spiderY + 10, 30, 40, PI, TWO_PI);
+    arc(spiderX + 50, spiderY + 10, 30, 40, PI, TWO_PI);
     // Eyes
     fill(255);
-    ellipse(x - 10, y, 20, 30);
-    ellipse(x + 10, y, 20, 30);
-    ellipse(x - 26, y, 12, 20);
-    ellipse(x + 26, y, 12, 20);
+    ellipse(spiderX - 10, spiderY, 20, 30);
+    ellipse(spiderX + 10, spiderY, 20, 30);
+    ellipse(spiderX - 26, spiderY, 12, 20);
+    ellipse(spiderX + 26, spiderY, 12, 20);
     fill(0);
-    circle(constrain(mouseX, x-15, x-5), constrain(mouseY, y-4, y+4), 5);
-    circle(constrain(mouseX, x+5, x+15), constrain(mouseY, y-4, y+4), 5);
-    circle(constrain(mouseX, x-29, x-23), constrain(mouseY, y-4, y+4), 5);
-    circle(constrain(mouseX, x+23, x+29), constrain(mouseY, y-4, y+4), 5);
+    circle(constrain(mouseX, spiderX-15, spiderX-5), constrain(mouseY, spiderY-4, spiderY+4), 5);
+    circle(constrain(mouseX, spiderX+5, spiderX+15), constrain(mouseY, spiderY-4, spiderY+4), 5);
+    circle(constrain(mouseX, spiderX-29, spiderX-23), constrain(mouseY, spiderY-4, spiderY+4), 5);
+    circle(constrain(mouseX, spiderX+23, spiderX+29), constrain(mouseY, spiderY-4, spiderY+4), 5);
     
     // Update spider
-    if (y < MIN_SPIDER_Y || y > MAX_SPIDER_Y) {
+    if (spiderY < MIN_SPIDER_Y || spiderY > MAX_SPIDER_Y) {
         if (spiderSpeed > 0) {
             spiderSpeed = -1;
         } else {
             spiderSpeed = 2;
         }
-        y += spiderSpeed;
+        spiderY += spiderSpeed;
     }
-    y += spiderSpeed;
+    spiderY += spiderSpeed;
 }
 
 function keyPressed() {
@@ -238,5 +238,5 @@ function keyPressed() {
     ghost3Alpha = random(0.5) * 255;
 
     // Reset the spider
-    y = MIN_SPIDER_Y;
+    spiderY = MIN_SPIDER_Y;
 }
