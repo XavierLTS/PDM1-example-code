@@ -1,23 +1,23 @@
-let ball = {
-    x: 50,
-    y: 50,
-    speedX: 3,
-    speedY: 3
+let typewriter, computer
+
+function preload() {
+    typewriter = loadFont("assets/Typewriter-LAYy.ttf");
+    computer = loadFont("assets/PressStart2P-Regular.ttf");
 }
 
 function setup() {
-    createCanvas(600, 400);
+    createCanvas(600, 600);
 }
 
 function draw() {
-    background(255);
-    circle(ball.x, ball.y, 100);
-    if (ball.x < 50 || ball.x > width - 50) {
-        ball.speedX *= -1;
-    }
-    if (ball.y < 50 || ball.y > height - 50) {
-        ball.speedY *= -1;
-    }
-    ball.x += ball.speedX;
-    ball.y += ball.speedY;
+    background(0);
+    
+    fill(255);
+    textFont(typewriter);
+    textSize(48);
+    text("Hello, World!", 0, 48);
+
+    textFont(computer);
+    fill(0, 255, 100);
+    text("Hello, Mouse!", mouseX, mouseY);
 }
