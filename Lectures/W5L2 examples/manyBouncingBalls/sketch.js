@@ -40,7 +40,7 @@ function mouseClicked() {
     balls.push({
         x: random(50, width - 50),
         y: random(50, height - 50),
-        speedX: random(1, 5),
-        speedY: random(1, 5)
+        speedX: random(0, 5),
+        speedY: random(0, 5)
     })
 }
