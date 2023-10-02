@@ -2,7 +2,7 @@
 .vscode
 /node_modules
 
-# Solution and example code to ignore until release time
+# Solution and example code to ignore until release time #
 # /Practicals/W1P2 solutions
 /Practicals/W2P1 solutions
 /Practicals/W2P2 solutions
