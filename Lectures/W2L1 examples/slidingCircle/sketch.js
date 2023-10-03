@@ -7,5 +7,5 @@ function setup() {
 function draw() {
     background(0);
     circle(x, height / 2, 40);
-    x++;
+    x = x + 1;
 }
