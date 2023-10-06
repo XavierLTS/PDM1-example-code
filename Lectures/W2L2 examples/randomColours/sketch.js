@@ -1,10 +1,10 @@
-let r;
+let r = random(256);
 let g;
 let b;
 
 function setup() {
     createCanvas(400, 400);
-    r = random(256);
+    // r = random(256);
     g = random(256);
     b = random(256);
 }
