@@ -5,6 +5,7 @@ function setup() {
     rectMode(CENTER);
     fft = new p5.FFT(0.8, 512);
     mic = new p5.AudioIn();
+    mic.start();
     fft.setInput(mic);
 }
 
@@ -19,8 +20,4 @@ function draw() {
         line(x, (height / 2) - fftScaled, x, (height / 2) + fftScaled);
         x++;
     }
-}
-
-function mouseClicked() {
-    mic.start();
 }

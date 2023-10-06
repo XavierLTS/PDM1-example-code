@@ -1,4 +1,4 @@
-let sineOsc, triOsc, squareOsc, sawOsc, fft;
+let sineOsc, triOsc, squareOsc, sawOsc, pulse, fft;
 let oscSelector;
 let currentOscillator = "";
 
@@ -9,12 +9,14 @@ function setup() {
     oscSelector.option("Triangle");
     oscSelector.option("Square");
     oscSelector.option("Saw");
+    oscSelector.option("Pulse");
     oscSelector.option("", "None");
 
     sineOsc = new p5.SinOsc();
     triOsc = new p5.TriOsc();
     squareOsc = new p5.SqrOsc();
     sawOsc = new p5.SawOsc();
+    pulse = new p5.Pulse();
 
     fft = new p5.FFT();
 
@@ -44,6 +46,9 @@ function mouseMoved() {
         } else if (currentOscillator === "Saw") {
             sawOsc.freq(mouseY);
             sawOsc.pan(map(mouseX, 0, width, -1, 1));
+        } else if (currentOscillator === "Pulse") {
+            pulse.freq(mouseY);
+            pulse.pan(map(mouseX, 0, width, -1, 1));
         }
     }
 }
@@ -76,6 +81,8 @@ function radioSelection() {
             squareOsc.start();
         } else if (currentOscillator === "Saw") {
             sawOsc.start();
+        } else if (currentOscillator === "Pulse") {
+            pulse.start();
         }
     }
 }
@@ -88,4 +95,5 @@ function stopAll() {
     triOsc.stop();
     squareOsc.stop();
     sawOsc.stop();
+    pulse.stop();
 }
