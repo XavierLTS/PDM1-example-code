@@ -11,6 +11,7 @@ function setup() {
 
 function draw() {
     background(0);
+    console.log("printing a message makes this work?");
     rect(width / 2, height / 2, mic.getLevel() * width, 100);
     let spectrum = fft.analyze();
     let x = (width - spectrum.length) / 2;
