@@ -4,9 +4,10 @@ function setup() {
 }
 
 function draw() {
-    background(0);
+    background(100);
+    rectMode(CENTER )
     fill(255);
-    square(75, 50, 150);
-    fill(0, 0, 255);
-    square(175, 100, 150);
+    circle (75, 50, 150);
+    fill(255, 0, 0);
+    circle (175, 100, 150);
 }

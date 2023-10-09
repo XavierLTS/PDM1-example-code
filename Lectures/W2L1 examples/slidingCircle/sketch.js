@@ -1,4 +1,5 @@
-let x = 0; // The value of x needs to be "remembered" from frame to frame
+let x = 400; // The value of x needs to be "remembered" from frame to frame
+    speed = -5
 
 function setup() {
     createCanvas(400, 300);
@@ -6,6 +7,6 @@ function setup() {
 
 function draw() {
     background(0);
-    circle(x, height / 2, 40);
-    x++;
+    circle(width-x, height / 2, 40);
+    x=x+speed;
 }
