@@ -3,5 +3,6 @@ function setup() {
 }
 
 function draw() {
-    console.log(key, keyCode);
+    background(mouseX)
+    console.log(mouseX);
 }
