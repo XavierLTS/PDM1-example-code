@@ -1,5 +1,8 @@
 let clicks = 0;
-let startX, startY, endX, endY;
+let startX;
+let startY;
+let endX
+let endY;
 
 function setup() {
     createCanvas(600, 600);
@@ -19,6 +22,7 @@ function draw() {
             console.log("added end x and y:", endX, ",", endY);
         }
         clicks++;
+        console.log("clicks:", clicks);
     }
     if (clicks % 2 === 1) {
         line(startX, startY, mouseX, mouseY);
