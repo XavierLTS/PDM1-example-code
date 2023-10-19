@@ -12,6 +12,7 @@ function draw() {
     circle(mirrorCoordinate(mouseX), mirrorCoordinate(mouseY), 50);
     fill(0, 255, 255, 160);
     circle(mirrorCoordinate(mouseX), mouseY, 50);
+    console.log(mirrorCoordinate(100));
 }
 
 function mirrorCoordinate(coordinate) {
